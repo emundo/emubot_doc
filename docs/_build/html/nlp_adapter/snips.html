@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Snips &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Rasa" href="rasa.html" />
+    <link rel="prev" title="Dialogflow" href="dialogflow.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/core_overview.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/interfaces.html">Interceptors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dialogflow.html">Dialogflow</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Snips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-snips-agent">Setting Up a Snips Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplar-snips-configuration">Exemplar Snips Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rasa.html">Rasa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Snips</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/nlp_adapter/snips.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="snips">
+<span id="id1"></span><h1>Snips<a class="headerlink" href="#snips" title="Permalink to this headline">¶</a></h1>
+<p>Snips is a speech recognition API provided by the Snips company.
+The main focus of Snips is to provide an on-device voice recognition platform,
+which allows developers to design Private-by-Design voice assistants, where the
+data never leaves the device. As such they focus on voice recognition
+algorithms which can run on small hardware. As part of their voice
+recognition pipeline they use Snips NLU, an open source NLU API provided as a
+Python package. In order to integrate a Snips NLU agent into <code class="code docutils literal notranslate"><span class="pre">emubot</span></code>
+you need to provide a server to which the framework can adress its requests.</p>
+<div class="section" id="setting-up-a-snips-agent">
+<h2>Setting Up a Snips Agent<a class="headerlink" href="#setting-up-a-snips-agent" title="Permalink to this headline">¶</a></h2>
+<p>The first steps in creating your Snips bot will follow the
+<a class="reference external" href="https://snips-nlu.readthedocs.io/en/latest/index.html">Snips NLU documentation</a>.
+In order to use the Snips NLU you can must first install the package using
+<cite>pip</cite>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install snips-nlu
+</pre></div>
+</div>
+<p>you will also need to download language resources for the languages you want
+your bot to use.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python -m snips_nlu download &lt;language&gt;
+</pre></div>
+</div>
+<p>Afterwards you should be good to go and can follow along the lines of the
+<a class="reference external" href="https://snips-nlu.readthedocs.io/en/latest/tutorial.html">Snips NLU tutorial</a>
+to define and train your bot.
+Snips NLU does not provide a server by default. <a href="#id2"><span class="problematic" id="id3">:code:`emubot ` provides
+a simple test server based on the `Flask &lt;https://github.com/pallets/flask&gt;`_</span></a>
+web application framework, which you can adapt to your needs. Your server
+should provide a POST route for the following request:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>POST /parse
+</pre></div>
+</div>
+<p>This request will include the following JSON:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">message_id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">token</span><span class="o">:</span> <span class="nx">string</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>where <cite>message_id</cite> is a user id that will allow you to keep track of different
+conversations. The <cite>text</cite> field is the actual text you will need to parse with
+the Snips NLU engine and <cite>token</cite> is the token you provide as part of the
+<code class="code docutils literal notranslate"><span class="pre">emubot</span></code> configuration, and which can be used to authenticate the requests.</p>
+<p>The expected response conforms to the format of a Snips NLU parse result</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">intent</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">intentName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+        <span class="nx">probability</span><span class="o">:</span> <span class="nx">number</span>
+    <span class="p">},</span>
+    <span class="nx">slots</span><span class="o">:</span> <span class="p">{</span>
+        <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+                <span class="nx">entity</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>By default the Snips NLU does not provide answers to your messages so if you
+want to provide your users with a text response to their requests you can
+include a <cite>messages</cite> field to the server response. Our framework will send
+these messages to the user as part of the response.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">intent</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">intentName</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+        <span class="nx">probability</span><span class="o">:</span> <span class="nx">number</span>
+    <span class="p">},</span>
+    <span class="nx">slots</span><span class="o">:</span> <span class="p">{</span>
+        <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+                <span class="nx">entity</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">},</span>
+    <span class="nx">messages</span><span class="o">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">],</span>
+    <span class="nx">action</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">contexts</span><span class="o">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exemplar-snips-configuration">
+<span id="exemplar-snips-config"></span><h2>Exemplar Snips Configuration<a class="headerlink" href="#exemplar-snips-configuration" title="Permalink to this headline">¶</a></h2>
+<p>Here you can see an example for a configuration of a Snips agent.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">platformNlpSnips</span><span class="o">:</span> <span class="nx">NlpConfig</span><span class="o">&lt;</span><span class="nx">SnipsAdapter</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">agents</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">snips_test</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">executionIndex</span><span class="o">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nx">languageCode</span><span class="o">:</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+            <span class="nx">minScore</span><span class="o">:</span> <span class="mf">0.8</span><span class="p">,</span>
+            <span class="nx">token</span><span class="o">:</span> <span class="s1">&#39;your_secret token&#39;</span><span class="p">,</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://www.url-to-your-server.com&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">SnipsAdapter</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;snips&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="rasa.html" class="btn btn-neutral float-right" title="Rasa" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="dialogflow.html" class="btn btn-neutral float-left" title="Dialogflow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

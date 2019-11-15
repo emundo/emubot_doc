@@ -1,0 +1,393 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Facebook Messenger &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Slack" href="slack.html" />
+    <link rel="prev" title="Configuration file" href="../configuration.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Facebook Messenger</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#create-a-facebook-application">Create a Facebook Application</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#messenger-service">Messenger service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#get-an-app-secret">Get an App Secret</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#webhooks-service">Webhooks Service</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplar-facebook-config">Exemplar Facebook Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#further-information-regarding-the-setup">Further Information Regarding the Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-features">Supported Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-your-webhook">Testing your Webhook</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/core_overview.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/interfaces.html">Interceptors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/dialogflow.html">Dialogflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/snips.html">Snips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/rasa.html">Rasa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Facebook Messenger</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/chat_adapter/facebook_messenger.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="facebook-messenger">
+<span id="fb-messenger"></span><h1>Facebook Messenger<a class="headerlink" href="#facebook-messenger" title="Permalink to this headline">¶</a></h1>
+<p>This page will guide you through setting up a Facebook Messenger chatbot. You need to create a Facebook Application, a Facebook page (if you
+do not already own one), and connect the Facebook Application with the page and your server.</p>
+<div class="section" id="create-a-facebook-application">
+<h2>Create a Facebook Application<a class="headerlink" href="#create-a-facebook-application" title="Permalink to this headline">¶</a></h2>
+<p>First of all, you have to create a Facebook Application. This application will manage the connection between your server and your Facebook page.
+Head over to the <a class="reference external" href="https://developers.facebook.com/">Facebook developer portal</a>, log in with your Facebook account and follow the required
+steps to setup your profile. Then select <code class="docutils literal notranslate"><span class="pre">Add</span> <span class="pre">New</span> <span class="pre">App</span></code> and name your application. You will be forwarded to a dashboard and asked to add a
+product. Choose the “Messenger” service and also add the “Webhooks” service (you can add more services by clicking on the “+” on the right panel).</p>
+<div class="section" id="messenger-service">
+<h3>Messenger service<a class="headerlink" href="#messenger-service" title="Permalink to this headline">¶</a></h3>
+<p>Activating the Messenger service is required to connect your app to one or multiple Facebook pages. In the Messenger service, scroll to the
+<code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">Tokens</span></code> section and add the Facebook page where you want to publish your bot. You might want to setup a test page during development.
+If you do not already own a page, simply create a new one (<code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Page</span></code>). Afterwards, generate a new <strong>page access token</strong> by clicking the
+<code class="docutils literal notranslate"><span class="pre">Generate</span> <span class="pre">Token</span></code> button that should be present in the <code class="docutils literal notranslate"><span class="pre">Access</span> <span class="pre">Tokens</span></code> section after adding your page. Save the page access token as you will
+need it later on in your configuration file (see below).</p>
+</div>
+<div class="section" id="get-an-app-secret">
+<h3>Get an App Secret<a class="headerlink" href="#get-an-app-secret" title="Permalink to this headline">¶</a></h3>
+<p>Head over to the <code class="docutils literal notranslate"><span class="pre">Settings</span> <span class="pre">-&gt;</span> <span class="pre">Basic</span></code> section of your Application. Here, you will see an <code class="docutils literal notranslate"><span class="pre">App</span> <span class="pre">Secret</span></code> field with a value which is hidden by
+default. Select <code class="docutils literal notranslate"><span class="pre">Show</span></code> and save the App Secret.</p>
+</div>
+<div class="section" id="webhooks-service">
+<h3>Webhooks Service<a class="headerlink" href="#webhooks-service" title="Permalink to this headline">¶</a></h3>
+<p>The webhook is required for the communication between your application and your webserver. After adding the Webhooks service to the products you
+use, switch to its section and click on the <code class="docutils literal notranslate"><span class="pre">Subscribe</span> <span class="pre">to</span> <span class="pre">this</span> <span class="pre">object</span></code> button. You will be prompted to add some endpoint (e.g.
+<cite>https://www.url_of_your_server.com/webhook</cite>) and a <code class="docutils literal notranslate"><span class="pre">verify_token</span></code>, which is some string you can set freely. It will be used to verify the
+communication between your server and your Facebook Application. Save this verify token. Now, you have to start the bot to continue. To do this,
+add the tokens to your config file (see <a class="reference internal" href="#exemplar-fb-config"><span class="std std-ref">Exemplar Facebook Config</span></a> below) and start the application on your server.</p>
+<p>On your server: Make sure to redirect the traffic sent to <cite>https://www.url_of_your_server.com/webhook</cite> to the port your bot is
+running on. Using Docker you could for example use a proxy, if you use an Apache Webserver, you might want to add a rewrite rule to your
+<code class="docutils literal notranslate"><span class="pre">~/html/.htaccess</span></code>.</p>
+<p>Important: You need to use https, i.e. have a valid TLS/SSL certificate configured. It is not possible to use self-signed certificates</p>
+<p>The running application is required to verify the webhook and you can not continue without setting the verify token! To run the application, you
+have to set all of the tokens you just got, put the into the configuration file and start the bot.</p>
+</div>
+</div>
+<div class="section" id="exemplar-facebook-config">
+<span id="exemplar-fb-config"></span><h2>Exemplar Facebook Config<a class="headerlink" href="#exemplar-facebook-config" title="Permalink to this headline">¶</a></h2>
+<p>To start a chatbot on the Facebook Messenger, you have to already have created an agent (speak: chatbot) on a NLP platform (see e.g.
+<a class="reference internal" href="../nlp_adapter/dialogflow.html#exemplar-df-config"><span class="std std-ref">Exemplar Dialogflow Configuration</span></a>). Afterwards, you need to follow the steps above to obtain</p>
+<ol class="arabic simple">
+<li><p>The page access token: the page access token generally allows you to e.g. post messages in the name of your Facebook page.</p></li>
+<li><p>The App Secret: used to verify the message payload.</p></li>
+<li><p>The Verify Token: used to verify the webhook.</p></li>
+</ol>
+<p>You can use an existing exemplar configuration file from our repository and change the values. Insert the App Secret, Page Access Token and
+Verify Token, possibly modify your webhook (depending on what you have entered in the Webhooks section of your Facebook Application), and maybe
+update the API version, depending on the Graph API version you use.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">platform</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">chat</span><span class="o">:</span> <span class="p">{</span>
+                <span class="nx">appSecret</span><span class="o">:</span> <span class="s1">&#39;YOUR_APP_SECRET&#39;</span><span class="p">,</span>
+                <span class="nx">constructor</span><span class="o">:</span> <span class="nx">FacebookAdapter</span><span class="p">,</span>
+                <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;facebook&#39;</span><span class="p">,</span>
+                <span class="nx">pageAccessToken</span><span class="o">:</span>
+                    <span class="s1">&#39;process.env.YOUR_FACEBOOK_PAGE_TOKEN&#39;</span><span class="p">,</span>
+                <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://graph.facebook.com/&#39;</span><span class="p">,</span>
+                <span class="nx">verifyToken</span><span class="o">:</span> <span class="s1">&#39;process.env.YOUR_FACEBOOK_VERIFY_TOKEN&#39;</span><span class="p">,</span>
+                <span class="nx">version</span><span class="o">:</span> <span class="s1">&#39;v3.3&#39;</span><span class="p">,</span>
+                <span class="nx">webhook_path</span><span class="o">:</span> <span class="s1">&#39;/webhook&#39;</span><span class="p">,</span>
+            <span class="p">},</span>
+            <span class="nx">nlp</span> <span class="p">{</span>
+                <span class="p">....</span>
+</pre></div>
+</div>
+<p>Compile the code using tsc and run <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
+</div>
+<div class="section" id="further-information-regarding-the-setup">
+<h2>Further Information Regarding the Setup<a class="headerlink" href="#further-information-regarding-the-setup" title="Permalink to this headline">¶</a></h2>
+<p>The application in its current form will only be accessible to invited testers. Public access requires a review through Facebook. To make your
+bot accessible to all Facebook users, head over to the <code class="docutils literal notranslate"><span class="pre">App</span> <span class="pre">Review</span></code> section of your Facebook Application and follow the respective steps.</p>
+</div>
+<div class="section" id="supported-features">
+<h2>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
+<p>Due to the large amount of possible structures provided by Facebook, we have only implemented some of the most commonly used features. Most importantly
+these are text messages, stickers and images. If we do not support some message type, we will declare it as invalid and pass the payload to the first
+interceptor where you can alter the message and send an appropriate response.</p>
+</div>
+<div class="section" id="testing-your-webhook">
+<h2>Testing your Webhook<a class="headerlink" href="#testing-your-webhook" title="Permalink to this headline">¶</a></h2>
+<p>The webhook API was adopted from <a class="reference external" href="https://developers.facebook.com/docs/messenger-platform/getting-started/webhook-setup">webhook-setup</a> and
+<a class="reference external" href="https://developers.facebook.com/docs/messenger-platform/webhook">webhook</a>. The instructions below might be outdated, please consult these
+websites if any errors occur.</p>
+<p>You have created the webhook but something does not quite work?
+Test the general functionality of your webhook:</p>
+<ol class="arabic">
+<li><p>Send a GET-Request to verify your webhook. The webhook requires 3 parameters:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>hub.verify_token</p></li>
+<li><p>hub.challenge</p></li>
+<li><p>hub.mode=subscribe</p></li>
+</ul>
+<p>The challenge value is returned if all parameters are set correctly. Test it via</p>
+<ol class="arabic simple">
+<li><p>Postman: Pass hub.verify_token, hub.challenge, hub.mode=subscribe along the GET-Request with <code class="docutils literal notranslate"><span class="pre">http://localhost:&lt;Port&gt;/webhook</span></code></p></li>
+<li><p>curl:</p></li>
+</ol>
+</div></blockquote>
+</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -X GET <span class="s2">&quot;localhost:&lt;Port&gt;/webhook?hub.verify_token=&lt;YOUR_VERIFY_TOKEN&gt;&amp;hub.challenge=CHALLENGE_ACCEPTED&amp;hub.mode=subscribe&quot;</span>
+</pre></div>
+</div>
+<p>This request should return an <code class="docutils literal notranslate"><span class="pre">Unauthorized</span></code> error if the verify token is not set correctly and will answer with <code class="docutils literal notranslate"><span class="pre">CHALLENGE_ACCEPTED</span></code> otherwise.</p>
+<ol class="arabic" start="2">
+<li><p>POST-Request: Messages from the Facebook API have the following format: <code class="docutils literal notranslate"><span class="pre">{&quot;object&quot;:</span> <span class="pre">&quot;page&quot;,</span> <span class="pre">&quot;entry&quot;:</span> <span class="pre">message[]}</span></code> Mandatory: messaging.sender.id
+and messaging.recipient.id. Test it:</p>
+<blockquote>
+<div><p>1.Postman: Send a POST-Request for <code class="docutils literal notranslate"><span class="pre">http://localhost:&lt;Port&gt;/webhook</span></code> with the JSON-body</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="o">{</span>
+    <span class="s2">&quot;object&quot;</span>: <span class="s2">&quot;page&quot;</span>,
+    <span class="s2">&quot;entry&quot;</span>: <span class="o">[</span>
+        <span class="o">{</span>
+            <span class="s2">&quot;messaging&quot;</span>: <span class="o">[</span>
+                <span class="o">{</span>
+                    <span class="s2">&quot;sender&quot;</span>: <span class="o">{</span>
+                        <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;abc&quot;</span>
+                    <span class="o">}</span>,
+                    <span class="s2">&quot;recipient&quot;</span>: <span class="o">{</span>
+                        <span class="s2">&quot;id&quot;</span>: <span class="s2">&quot;def&quot;</span>
+                    <span class="o">}</span>,
+                    <span class="s2">&quot;message&quot;</span>: <span class="o">{</span>
+                        <span class="s2">&quot;text&quot;</span>: <span class="s2">&quot;TEST_MESSAGE&quot;</span>
+                    <span class="o">}</span>
+                <span class="o">}</span>
+            <span class="o">]</span>
+        <span class="o">}</span>
+    <span class="o">]</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>The content of the JSON will change depending on the type of notifications Facebook sends to you.</p>
+<blockquote>
+<div><ol class="arabic simple" start="2">
+<li><p>curl:</p></li>
+</ol>
+</div></blockquote>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl -H <span class="s2">&quot;Content-Type: application/json&quot;</span> -X POST <span class="s2">&quot;localhost:&lt;Port&gt;/webhook&quot;</span> -d <span class="s1">&#39;{&quot;object&quot;: &quot;page&quot;, &quot;entry&quot;: [{&quot;messaging&quot;: [{&quot;sender&quot;:{&quot;id&quot;:&quot;abc&quot;},&quot;recipient&quot;:{&quot;id&quot;:&quot;def&quot;},&quot;message&quot;:{&quot;text&quot;:&quot;TEST_MESSAGE&quot;}}]}]}&#39;</span>
+</pre></div>
+</div>
+<p>If you have correctly set up the webhook, this should return an <code class="docutils literal notranslate"><span class="pre">EVENT_RECEIVED</span></code> message.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Do not forget to replace the ids, port and verify token.</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="slack.html" class="btn btn-neutral float-right" title="Slack" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../configuration.html" class="btn btn-neutral float-left" title="Configuration file" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Rasa &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Support Your NLP Platform" href="custom_nlp_adapter.html" />
+    <link rel="prev" title="Snips" href="snips.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/core_overview.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/interfaces.html">Interceptors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="dialogflow.html">Dialogflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="snips.html">Snips</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Rasa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-rasa-agent">Setting Up a Rasa Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplar-rasa-configuration">Exemplar Rasa Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Rasa</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/nlp_adapter/rasa.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="rasa">
+<span id="id1"></span><h1>Rasa<a class="headerlink" href="#rasa" title="Permalink to this headline">¶</a></h1>
+<p>Rasa is an open source NLU provider that is distributed as an Python API,
+developed and provided by Rasa Technologies. Different from other closed
+source providers like Dialogflow, you will need to host your own server
+in order to use Rasa. This will pose several challenges and is not as
+easy to integrate into the framework as other agents, where you simply have
+to provide a valid configuration to the configuration file and are good to go.
+One major advantage of hosting your own server is that you do not have
+to share any of your data with another company.
+Here we will quickly introduce how you can setup <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> using Rasa.</p>
+<div class="section" id="setting-up-a-rasa-agent">
+<h2>Setting Up a Rasa Agent<a class="headerlink" href="#setting-up-a-rasa-agent" title="Permalink to this headline">¶</a></h2>
+<p>You can install the Rasa API as a <cite>pip</cite> package by using the following
+command:</p>
+<blockquote>
+<div><div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip3 install rasa-x --extra-index-url https://pypi.rasa.com/simple
+</pre></div>
+</div>
+</div></blockquote>
+<p>After you have installed the Rasa API you can follow
+<a class="reference external" href="https://rasa.com/docs/rasa/user-guide/rasa-tutorial/">Rasa tutorial</a> to
+define your own Rasa bot. After you have done so you can use the provided Rasa
+commands to train your bot and start a test server:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rasa train
+rasa run --enable-api -m path/to/trained/model
+</pre></div>
+</div>
+<p>The example Rasa server will start on port 5000 by default. The framework
+uses the HTTP API provided with the server as a reference for its
+implementation. If you want to use your own server between the
+framework and Rasa, you should provide the following two routes for the
+requests from the framework:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>POST /model/parse
+</pre></div>
+</div>
+<p>This route parses the provided text using your model.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">message_id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">sender</span><span class="o">:</span> <span class="s1">&#39;user&#39;</span><span class="p">,</span>
+    <span class="nx">text</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">token</span><span class="o">:</span> <span class="nx">string</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The response is expected to include the following fields:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">entities</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+            <span class="nx">entity</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">intent</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">confidence</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span>
+    <span class="p">},</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Where entities and intent are conform with the Rasa parse results.</p>
+<p>You can also add the following fields in order to give additional information
+to your interceptors:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">entities</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+            <span class="nx">entity</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nx">intent</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">confidence</span><span class="o">:</span> <span class="nx">number</span><span class="p">,</span>
+        <span class="nx">name</span><span class="o">:</span> <span class="nx">string</span>
+    <span class="p">},</span>
+    <span class="nx">action</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">contexts</span><span class="o">:</span> <span class="p">[</span><span class="nx">string</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>POST /webhooks/rest/webhook
+</pre></div>
+</div>
+<p>This route parses the provided text with your trained Rasa model.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nx">message</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">message_id</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+    <span class="nx">token</span><span class="o">:</span> <span class="nx">string</span><span class="p">,</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The result of the request is the answer of the Rasa agent:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;text&quot;</span><span class="o">:</span> <span class="nx">string</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Note that <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> will also add the token you provide in the
+configuration to the requests. You can use this token as an API token for
+your server.</p>
+<p>Of course you can include any number of other information in your responses,
+which you can then use to trigger events in the implementation of your
+<a class="reference internal" href="../core/interfaces.html#interceptors"><span class="std std-ref">Interceptors</span></a>. But you should make sure to pass the information to the
+<code class="code docutils literal notranslate"><span class="pre">emubot</span></code> framework.</p>
+<p>These requests have to conform to the definition in the
+<a class="reference external" href="https://rasa.com/docs/rasa/api/http-api/">Rasa HTTP API</a>. Head over to
+their docs for more information.</p>
+</div>
+<div class="section" id="exemplar-rasa-configuration">
+<span id="exemplar-rasa-config"></span><h2>Exemplar Rasa Configuration<a class="headerlink" href="#exemplar-rasa-configuration" title="Permalink to this headline">¶</a></h2>
+<p>In this section you can see an example for a Rasa configuration to be used in
+the <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> framework.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">platformNlpRasa</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">agents</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">first_agent</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">defaultLifespan</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nx">executionIndex</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nx">languageCode</span><span class="o">:</span> <span class="s1">&#39;en&#39;</span><span class="p">,</span>
+            <span class="nx">minScore</span><span class="o">:</span> <span class="mf">0.75</span><span class="p">,</span>
+            <span class="nx">token</span><span class="o">:</span> <span class="nx">env</span><span class="p">.</span><span class="nx">NLP_TOKEN</span><span class="p">,</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://my-cool-rasa-bot.com/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">RasaAdapter</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;rasa&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="custom_nlp_adapter.html" class="btn btn-neutral float-right" title="Support Your NLP Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="snips.html" class="btn btn-neutral float-left" title="Snips" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

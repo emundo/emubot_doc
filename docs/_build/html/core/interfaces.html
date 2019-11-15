@@ -1,0 +1,293 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Interceptors &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Dialogflow" href="../nlp_adapter/dialogflow.html" />
+    <link rel="prev" title="Core" href="core_overview.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="core_overview.html">Core</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interceptors</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#chat-to-core">Chat to Core</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pseudonymize-the-user">Pseudonymize the User</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#nlp-to-nlp">Nlp to Nlp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nlp-to-core">Nlp to Core</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/dialogflow.html">Dialogflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/snips.html">Snips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/rasa.html">Rasa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Interceptors</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/core/interfaces.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="interceptors">
+<span id="id1"></span><h1>Interceptors<a class="headerlink" href="#interceptors" title="Permalink to this headline">¶</a></h1>
+<p>The general structure of our architecture can be seen here:</p>
+<img alt="../_images/architecture.png" src="../_images/architecture.png" />
+<p>There are three distinctive interfaces that allow you to interact with the framework. We call these interfaces the “Chat to Core”,
+“Nlp to Nlp” and “Nlp to Core” interceptor and explain possible use of each interface below. If you do not wish to perform any actions, you can simply
+use a <code class="code docutils literal notranslate"><span class="pre">MirrorInterface</span></code> which is already part of our base framework and is used in our exemplar repositories. At the interceptor you can
+perform any action (like adding or removing data from the incoming query), as long as you  return the same format, wrapped in a <code class="code docutils literal notranslate"><span class="pre">Response</span></code>.
+Using the <code class="code docutils literal notranslate"><span class="pre">Response</span></code> wrapper, you can…</p>
+<ol class="arabic simple">
+<li><p>determine if a message handling should be continued normally or if the processing should be interrupted.</p></li>
+<li><p>handle message types not supported by our framework by interrupting the usual process (set the <cite>interruptProcessing</cite> flag inside a <code class="code docutils literal notranslate"><span class="pre">Response</span></code>
+to true). It is expected that the message then already includes all relevant information to answer a user, or</p></li>
+<li><p>interrupt the processing by sending a <code class="code docutils literal notranslate"><span class="pre">NoResponse</span></code>. The user will not receive any notification. This might be confusing and you should manually
+send a message from your interceptor.</p></li>
+</ol>
+<p>We will now further investigate the three interceptors and common usages.</p>
+<div class="section" id="chat-to-core">
+<span id="chattocore"></span><h2>Chat to Core<a class="headerlink" href="#chat-to-core" title="Permalink to this headline">¶</a></h2>
+<p>After the user query has been stripped of unnecessary data, we directly pass the data to the Chat to Core interface. The interface expects to receive a
+<code class="code docutils literal notranslate"><span class="pre">ChatAdapterRequest</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;ChatAdapterRequest&gt;</span></code>. At this interceptor, we commonly</p>
+<ol class="arabic simple">
+<li><p>Manipulate the message itself, e.g. change the content or type of a message, transform a speech message to a text message or pseudonymize the user identifier.</p></li>
+<li><p>Update the state of other applications (e.g. reposting contexts to your NLP service provider or saving/retrieving information to/from some database).</p></li>
+<li><p>Handle unknown incoming message types and either transform them into a text message, return a message with a type supported by our framework, or handle the
+message directly and interrupt the default framework message handling procedure.</p></li>
+</ol>
+<div class="section" id="pseudonymize-the-user">
+<span id="pseudonymization"></span><h3>Pseudonymize the User<a class="headerlink" href="#pseudonymize-the-user" title="Permalink to this headline">¶</a></h3>
+<p>One important feature is the protection of the user identity. Several common messengers transmit a user identifier which can be used to retrieve some additional
+and sensitive information like the name or profile data on social media. This information should be protected from any entity that does not require the data (and
+should, at least in europe, be treated according to the GDPR). An easy way is to exchange the user ID from the messenger with some pseudonym that is mapped back
+to the identifier as soon as you want to send the message back to the user.</p>
+<p>An exemplar implementation can be found in our <a class="reference external" href="https://github.com/emundo/emubot-extended-example/">extended example</a>.</p>
+</div>
+</div>
+<div class="section" id="nlp-to-nlp">
+<span id="nlptonlp"></span><h2>Nlp to Nlp<a class="headerlink" href="#nlp-to-nlp" title="Permalink to this headline">¶</a></h2>
+<p>This second interceptor is especially of relevance if you utilize multiple agents. In the section about <a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html#custom-chat-adapter"><span class="std std-ref">Support Your Chat Platform</span></a>, we explain the default workflow.
+This means, that a message is passed to another agent if it doesnt exceed a minimal score or if a fallback intent occurs.</p>
+<p>Using the Nlp to Nlp interface, you can further introduce advanced rules set by yourself:
+Sometimes you want to return some fallback intent, ignore the minimal score or delete contexts set by an agent whose message you do not want to send to the user.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">nlpToCore</span></code> expects an incoming <code class="code docutils literal notranslate"><span class="pre">NlpResponse</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;NlpResponse&gt;</span></code>.</p>
+</div>
+<div class="section" id="nlp-to-core">
+<span id="nlptocore"></span><h2>Nlp to Core<a class="headerlink" href="#nlp-to-core" title="Permalink to this headline">¶</a></h2>
+<p>After determining the intent (and possibly receiving a static response), you can perform actions using the Nlp to Core interface. Once again, this can have different
+purposes:</p>
+<p>You might want to
+1. manipulate the message (e.g. use parameters retrieved from the NLU platform for a database request, used to assemble a new answer),
+2. begin some event (e.g. send message to the client in5x minutes),
+3. save/retrieve data to/from a service (e.g. save contexts in a database), or
+4. map the pseudonymized user ID to the user ID from the messenger for further processing.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">nlpToCore</span></code> expects an incoming <code class="code docutils literal notranslate"><span class="pre">NlpResponse</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;NlpResponse&gt;</span></code>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../nlp_adapter/dialogflow.html" class="btn btn-neutral float-right" title="Dialogflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="core_overview.html" class="btn btn-neutral float-left" title="Core" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

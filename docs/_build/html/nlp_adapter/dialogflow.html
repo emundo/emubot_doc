@@ -1,0 +1,272 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Dialogflow &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Snips" href="snips.html" />
+    <link rel="prev" title="Interceptors" href="../core/interfaces.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/core_overview.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/interfaces.html">Interceptors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Dialogflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setting-up-a-dialogflow-agent">Setting Up A Dialogflow Agent</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplar-dialogflow-configuration">Exemplar Dialogflow Configuration</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="snips.html">Snips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rasa.html">Rasa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Dialogflow</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/nlp_adapter/dialogflow.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="dialogflow">
+<span id="id1"></span><h1>Dialogflow<a class="headerlink" href="#dialogflow" title="Permalink to this headline">¶</a></h1>
+<p>Dialogflow (formerly known as api.ai) is an NLP service offered by Google. Dialogflow version 1 has used developer and client access tokens to authorize access.
+The support for this authorization method will soon be replaced completely and they only Dialogflow version 2 will be supported , where you have to authorize
+using tokens provided by Google Cloud Projects. The following instructions will only cover the Dialogflow version 2 authentication, since version 1 will be
+deprecated soon (even though <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> still supports Dialogflow version 1).</p>
+<div class="section" id="setting-up-a-dialogflow-agent">
+<h2>Setting Up A Dialogflow Agent<a class="headerlink" href="#setting-up-a-dialogflow-agent" title="Permalink to this headline">¶</a></h2>
+<p>To setup a chatbot you have to create an agent, i.e. an entity that includes the knowledge of your bot. Head over to the
+<a class="reference external" href="https://dialogflow.cloud.google.com/">Dialogflow console</a>, create an agent and fill it with some content (take a look at their
+<a class="reference external" href="https://cloud.google.com/dialogflow/docs/">docs</a>). Go to the settings of your agent (the cogwheel symbol on the left) and follow the link to your service
+account. Select the correct service account, click the three dots on the right (below <code class="docutils literal notranslate"><span class="pre">Actions</span></code>) to create a new key (<code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Key</span> <span class="pre">--&gt;</span> <span class="pre">JSON</span></code>). Download the JSON
+file and save it somewhere where it is accessible by the configuration file.</p>
+</div>
+<div class="section" id="exemplar-dialogflow-configuration">
+<span id="exemplar-df-config"></span><h2>Exemplar Dialogflow Configuration<a class="headerlink" href="#exemplar-dialogflow-configuration" title="Permalink to this headline">¶</a></h2>
+<p>After downloading the authentication file you can setup your configuration.
+You can use an existing configuration file and simply alter the values. The structure is as follows:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">platformNlpDialogflowV2</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">agents</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">first_agent</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">defaultLifespan</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nx">executionIndex</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="nx">languageCode</span><span class="o">:</span> <span class="s1">&#39;de&#39;</span><span class="p">,</span>
+            <span class="nx">minScore</span><span class="o">:</span> <span class="mf">0.75</span><span class="p">,</span>
+            <span class="nx">project_id</span><span class="o">:</span> <span class="s1">&#39;GCP-ID&#39;</span><span class="p">,</span>
+            <span class="nx">token</span><span class="o">:</span> <span class="s1">&#39;path/to/authenticationfile.json&#39;</span><span class="p">,</span>
+            <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://www.DIALOGFLOW-ENDPOINT-URL.com/&#39;</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
+    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">DialogflowV2Adapter</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;dialogflowV2&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">url</span></code> is not required for dialogflow version 2 since we will use the dialogflow dependency. The language codes can be found in the dialogflow docs.
+More information regarding the <code class="code docutils literal notranslate"><span class="pre">executionIndex</span></code> and <code class="code docutils literal notranslate"><span class="pre">minScore</span></code> can be found at <a class="reference internal" href="custom_nlp_adapter.html#custom-nlp-adapter"><span class="std std-ref">Support Your NLP Platform</span></a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="snips.html" class="btn btn-neutral float-right" title="Snips" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../core/interfaces.html" class="btn btn-neutral float-left" title="Interceptors" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,318 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Slack &mdash; emubot  documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Support Your Chat Platform" href="your_custom_chat_adapter.html" />
+    <link rel="prev" title="Facebook Messenger" href="facebook_messenger.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #5E2028" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> emubot
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Overview</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../configuration.html">Configuration file</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Chat Adapters</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="facebook_messenger.html">Facebook Messenger</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Slack</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-slack-app">Creating a Slack App</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-a-bot-user">Creating a Bot User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#app-credentials">App Credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#subscribing-to-events">Subscribing to Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exemplar-slack-config">Exemplar Slack Config</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-features">Supported Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#testing-your-setup">Testing Your Setup</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Core</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../core/core_overview.html">Core</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../core/interfaces.html">Interceptors</a></li>
+</ul>
+<p class="caption"><span class="caption-text">NLP platforms</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/dialogflow.html">Dialogflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/snips.html">Snips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/rasa.html">Rasa</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../nlp_adapter/custom_nlp_adapter.html">Support Your NLP Platform</a></li>
+</ul>
+<p class="caption"><span class="caption-text">API</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">API Reference</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Miscellaneous</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../about_us.html">About Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">emubot</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Slack</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/chat_adapter/slack.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="slack">
+<span id="id1"></span><h1>Slack<a class="headerlink" href="#slack" title="Permalink to this headline">¶</a></h1>
+<p>This page will help you set up a Slack chatbot. In order to integrate
+a chatbot into your Slack channel you first need to create a channel,
+a Slack app and a bot user. Then you need to add the bot user to a workspace
+and set up the event handling for the bot. All this information is taken from
+the Slack API documentation, specifically the section about
+<a class="reference external" href="https://api.slack.com/bot-users">bot users</a>. For more information please
+refer directly to the Slack documentation.</p>
+<div class="section" id="creating-a-slack-app">
+<h2>Creating a Slack App<a class="headerlink" href="#creating-a-slack-app" title="Permalink to this headline">¶</a></h2>
+<p>Following the <a class="reference external" href="https://api.slack.com/bot-users">bot users</a> guide you can
+simply click on the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">new</span> <span class="pre">app</span></code> button in order to start your new app.
+Name it and assign a workspace and you are good to go. You should now see
+multiple new setup options.</p>
+</div>
+<div class="section" id="creating-a-bot-user">
+<h2>Creating a Bot User<a class="headerlink" href="#creating-a-bot-user" title="Permalink to this headline">¶</a></h2>
+<p>Having created your app the next step is to add a bot user. The bot user will
+be part of your workspace, where you and your co-workers can proceed to
+interact with it. Creating a bot user is also very easy, simply select your new
+app by clicking on the <cite>Your Apps</cite> button on the top right. Open the
+<cite>Add features and functionality</cite> menu. In the menu you will see a button titled
+<cite>Bots</cite>. Clicking the button creates a bot user.</p>
+</div>
+<div class="section" id="app-credentials">
+<h2>App Credentials<a class="headerlink" href="#app-credentials" title="Permalink to this headline">¶</a></h2>
+<p>In order to use the Slack adapter of the <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> framework with your new
+Slack bot you will need to provide some app credentials. You can find the
+credentials by clicking on the <code class="docutils literal notranslate"><span class="pre">Your</span> <span class="pre">Apps</span></code> button of the Slack API
+documentation and selecting your app. If you scroll down you should see the app
+credentials. <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> needs the <code class="docutils literal notranslate"><span class="pre">Signing</span> <span class="pre">Secret</span></code>, which you should
+put in the <cite>appSecret</cite> field of your Slack-configuration. Please take a look at
+the <a class="reference internal" href="#exemplar-slack-config"><span class="std std-ref">Exemplar Slack Config</span></a> section for instructions on how to setup the
+correct configuration for <code class="code docutils literal notranslate"><span class="pre">emubot</span></code>.</p>
+</div>
+<div class="section" id="subscribing-to-events">
+<h2>Subscribing to Events<a class="headerlink" href="#subscribing-to-events" title="Permalink to this headline">¶</a></h2>
+<p>Return to the menu where you have created the bot user. Here, you can also add
+a webhook path in order to combine your new bot user with your server. Simply
+click on the <code class="docutils literal notranslate"><span class="pre">Event</span> <span class="pre">Subscriptions</span></code> button and add your request URL in the text
+field. Note that Slack will immediately send a request containing a challenge to
+the URL in order to verify it. You should make sure that your bot is running with
+the correct credentials. Your request URL will be verified if everything is
+configured correctly and you should be good to go. Otherwise, check whether <code class="code docutils literal notranslate"><span class="pre">emubot</span></code>
+is up and running on the correct URL.</p>
+</div>
+<div class="section" id="exemplar-slack-config">
+<span id="id3"></span><h2>Exemplar Slack Config<a class="headerlink" href="#exemplar-slack-config" title="Permalink to this headline">¶</a></h2>
+<p>To start the Botframework with the Slack adapter you will need to provide a
+valid platform configuration file. Assuming you have already setup a NLP
+agent (see <a class="reference internal" href="../nlp_adapter/dialogflow.html#exemplar-df-config"><span class="std std-ref">Exemplar Dialogflow Configuration</span></a>), the configuration should look
+like this:</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">platformChatSlack</span><span class="o">:</span> <span class="nx">ChatConfig</span><span class="o">&lt;</span><span class="nx">SlackAdapter</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="nx">appSecret</span><span class="o">:</span> <span class="s1">&#39;YOUR-SLACK-APP-SECRET&#39;</span><span class="p">,</span>
+    <span class="nx">constructor</span><span class="o">:</span> <span class="nx">SlackAdapter</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;slack&#39;</span><span class="p">,</span>
+    <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://slack.com/api/chat.postMessage&#39;</span><span class="p">,</span>
+    <span class="nx">webhook_path</span><span class="o">:</span> <span class="s1">&#39;/webhook&#39;</span><span class="p">,</span>
+<span class="p">};</span>
+</pre></div>
+</div>
+<p>After you have saved the configuration file you can simply compile the program
+(using <cite>npm run tsc</cite>) and run the bot with <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
+</div>
+<div class="section" id="supported-features">
+<h2>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
+<p>Note that <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> will only deal with text messages from Slack as of
+yet. All other messages must be handled in the first interceptor and will be
+ignored otherwise.</p>
+</div>
+<div class="section" id="testing-your-setup">
+<h2>Testing Your Setup<a class="headerlink" href="#testing-your-setup" title="Permalink to this headline">¶</a></h2>
+<p>If you have followed the instructions you should have a running <code class="code docutils literal notranslate"><span class="pre">emubot</span></code>
+instance accesible through a request URL, which you have provided to your Slack
+app. If the request URL got verified by Slack you should be good to go. In your
+Slack workspace you should now see your created bot user and you should also be
+able to start a conversation with your bot.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="your_custom_chat_adapter.html" class="btn btn-neutral float-right" title="Support Your Chat Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="facebook_messenger.html" class="btn btn-neutral float-left" title="Facebook Messenger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, eMundo GmbH
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
