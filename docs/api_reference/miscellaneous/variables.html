@@ -1,0 +1,1322 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>emubot API Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">emubot API Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content miscellaneous-variables">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   
+
+<ol class="breadcrumb">
+  <li>Miscellaneous</li>
+  <li>Variables</li>
+</ol>
+
+<section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <ul class="index-list">
+                        <li>
+                            <a href="#adapter" title="src/core/getAdapter.ts"><b>adapter</b>&nbsp;&nbsp;&nbsp;(src/.../getAdapter.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#agents" title="src/core/utils/findBestNlpAnswerForTextRequest.ts"><b>agents</b>&nbsp;&nbsp;&nbsp;(src/.../findBestNlpAnswerForTextRequest.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#chatToCore" title="src/core/getInterceptors.ts"><b>chatToCore</b>&nbsp;&nbsp;&nbsp;(src/.../getInterceptors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#config" title="src/configuration/configFacebookDf2.ts"><b>config</b>&nbsp;&nbsp;&nbsp;(src/.../configFacebookDf2.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#config" title="src/configuration/configFacebookRasa.ts"><b>config</b>&nbsp;&nbsp;&nbsp;(src/.../configFacebookRasa.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#config" title="src/configuration/configSlackDf2.ts"><b>config</b>&nbsp;&nbsp;&nbsp;(src/.../configSlackDf2.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#config" title="src/core/getConfig.ts"><b>config</b>&nbsp;&nbsp;&nbsp;(src/.../getConfig.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#configPort" title="src/core/getConfig.ts"><b>configPort</b>&nbsp;&nbsp;&nbsp;(src/.../getConfig.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DEFAULT_LOG_MESSAGES" title="src/constants/logMessages.ts"><b>DEFAULT_LOG_MESSAGES</b>&nbsp;&nbsp;&nbsp;(src/.../logMessages.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#DEFAULT_MESSAGES" title="src/constants/messages.ts"><b>DEFAULT_MESSAGES</b>&nbsp;&nbsp;&nbsp;(src/.../messages.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#doesResponsePassScoringThreshold" title="src/core/utils/findBestNlpAnswerForTextRequest.ts"><b>doesResponsePassScoringThreshold</b>&nbsp;&nbsp;&nbsp;(src/.../findBestNlpAnswerForTextRequest.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#interceptorConfig" title="src/configuration/interceptorConfig.ts"><b>interceptorConfig</b>&nbsp;&nbsp;&nbsp;(src/.../interceptorConfig.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#LOG_MESSAGES" title="src/constants/logMessages.ts"><b>LOG_MESSAGES</b>&nbsp;&nbsp;&nbsp;(src/.../logMessages.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#logger" title="src/logger.ts"><b>logger</b>&nbsp;&nbsp;&nbsp;(src/.../logger.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#logLevel" title="src/logger.ts"><b>logLevel</b>&nbsp;&nbsp;&nbsp;(src/.../logger.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#MESSAGES" title="src/constants/messages.ts"><b>MESSAGES</b>&nbsp;&nbsp;&nbsp;(src/.../messages.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#nlpToCore" title="src/core/getInterceptors.ts"><b>nlpToCore</b>&nbsp;&nbsp;&nbsp;(src/.../getInterceptors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#nlpToNlp" title="src/core/getInterceptors.ts"><b>nlpToNlp</b>&nbsp;&nbsp;&nbsp;(src/.../getInterceptors.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformChatFacebook" title="src/configuration/platformChatFacebook.ts"><b>platformChatFacebook</b>&nbsp;&nbsp;&nbsp;(src/.../platformChatFacebook.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformChatSlack" title="src/configuration/platformChatSlack.ts"><b>platformChatSlack</b>&nbsp;&nbsp;&nbsp;(src/.../platformChatSlack.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformNlpDialogflow" title="src/configuration/platformNlpDialogflow.ts"><b>platformNlpDialogflow</b>&nbsp;&nbsp;&nbsp;(src/.../platformNlpDialogflow.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformNlpDialogflowV2" title="src/configuration/platformNlpDialogflowV2.ts"><b>platformNlpDialogflowV2</b>&nbsp;&nbsp;&nbsp;(src/.../platformNlpDialogflowV2.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformNlpRasa" title="src/configuration/platformNlpRasa.ts"><b>platformNlpRasa</b>&nbsp;&nbsp;&nbsp;(src/.../platformNlpRasa.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#platformNlpSnips" title="src/configuration/platformNlpSnips.ts"><b>platformNlpSnips</b>&nbsp;&nbsp;&nbsp;(src/.../platformNlpSnips.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#PRIMARY_AGENT_INDEX" title="src/core/utils/findBestNlpAnswerForTextRequest.ts"><b>PRIMARY_AGENT_INDEX</b>&nbsp;&nbsp;&nbsp;(src/.../findBestNlpAnswerForTextRequest.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#serverConfig" title="src/configuration/serverConfig.ts"><b>serverConfig</b>&nbsp;&nbsp;&nbsp;(src/.../serverConfig.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WEBHOOK_PATH" title="src/chat_adapter/facebook/communication/webhook.ts"><b>WEBHOOK_PATH</b>&nbsp;&nbsp;&nbsp;(src/.../webhook.ts)</a>
+                        </li>
+                        <li>
+                            <a href="#WEBHOOK_VERIFICATION" title="src/chat_adapter/facebook/communication/webhook.ts"><b>WEBHOOK_VERIFICATION</b>&nbsp;&nbsp;&nbsp;(src/.../webhook.ts)</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    <h3>src/core/getAdapter.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="adapter"></a>
+                        <span class="name">
+                            <b>
+                            adapter</b>
+                            <a href="#adapter"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#Adapter" target="_self" >Adapter</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    get nlp(): NlpAdapter {
+        return new (getConfig()).platform.nlp.constructor();
+    },
+    get chat(): ChatAdapter {
+        return new (getConfig()).platform.chat.constructor();
+    },
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Convenience object to provide access to the NlpAdapter and ChatAdapter.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/core/utils/findBestNlpAnswerForTextRequest.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="agents"></a>
+                        <span class="name">
+                            <b>
+                            agents</b>
+                            <a href="#agents"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>getOrderedAgents()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="doesResponsePassScoringThreshold"></a>
+                        <span class="name">
+                            <b>
+                            doesResponsePassScoringThreshold</b>
+                            <a href="#doesResponsePassScoringThreshold"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>(
+    botResponse: NlpResponse,
+    agentIndex: number,
+): boolean &#x3D;&gt; {
+    const minimalAcceptableScore &#x3D; agents[agentIndex].minScore;
+    const textRequestResult &#x3D; botResponse.textRequestResult;
+    const score &#x3D; textRequestResult.score;
+
+    return score &gt;&#x3D; minimalAcceptableScore;
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Checks if the message passes the agent specific minimal threshold, i.e. the confidence of the NLP service exceeds
+some predefined and individually set threshold.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="PRIMARY_AGENT_INDEX"></a>
+                        <span class="name">
+                            <b>
+                            PRIMARY_AGENT_INDEX</b>
+                            <a href="#PRIMARY_AGENT_INDEX"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/core/getInterceptors.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="chatToCore"></a>
+                        <span class="name">
+                            <b>
+                            chatToCore</b>
+                            <a href="#chatToCore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Promise&lt;Interceptor&lt;ChatAdapterRequest, ChatAdapterRequest&gt;&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>getConfig().interceptors.chatToCore()</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>More information regarding the usage of the interceptors can be found at
+<a href="../interfaces/Interceptor.html">Interceptor</a></p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nlpToCore"></a>
+                        <span class="name">
+                            <b>
+                            nlpToCore</b>
+                            <a href="#nlpToCore"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Interceptor.html" target="_self" >Promise&lt;Interceptor&lt;NlpResponse, NlpResponse&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>getConfig().interceptors.nlpToCore()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="nlpToNlp"></a>
+                        <span class="name">
+                            <b>
+                            nlpToNlp</b>
+                            <a href="#nlpToNlp"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Interceptor.html" target="_self" >Promise&lt;Interceptor&lt;NlpResponse, NlpResponse&gt;&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>getConfig().interceptors.nlpToNlp()</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/configFacebookDf2.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Config&lt;FacebookAdapter, DialogflowV2Adapter&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    interceptors: interceptorConfig,
+    platform: {
+        chat: platformChatFacebook,
+        nlp: platformNlpDialogflowV2,
+    },
+    server: serverConfig,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>An exemplar configuration using Facebook and DialogflowV2.
+You can exchange elements (e.g. use Slack instead of Facebook) by using a different respective (messenger) configuration.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/configFacebookRasa.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Config&lt;FacebookAdapter, RasaAdapter&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    interceptors: interceptorConfig,
+    platform: {
+        chat: platformChatFacebook,
+        nlp: platformNlpRasa,
+    },
+    server: serverConfig,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>An exemplar configuration using Facebook and Rasa.
+You can exchange elements (e.g. use Slack instead of Facebook) by using a different respective (messenger) configuration.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/configSlackDf2.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Config&lt;SlackAdapter, DialogflowV2Adapter&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    interceptors: interceptorConfig,
+    platform: {
+        chat: platformChatSlack,
+        nlp: platformNlpDialogflowV2,
+    },
+    server: serverConfig,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>An exemplar configuration using Slack and DialogflowV2.
+You can exchange elements (e.g. use Facebook instead of Slack) by using a different respective (messenger) configuration.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/core/getConfig.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="config"></a>
+                        <span class="name">
+                            <b>
+                            config</b>
+                            <a href="#config"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Config&lt;ChatAdapter, NlpAdapter&gt;</code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="configPort"></a>
+                        <span class="name">
+                            <b>
+                            configPort</b>
+                            <a href="#configPort"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/constants/logMessages.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DEFAULT_LOG_MESSAGES"></a>
+                        <span class="name">
+                            <b>
+                            DEFAULT_LOG_MESSAGES</b>
+                            <a href="#DEFAULT_LOG_MESSAGES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    chat: {
+        convertToUrlButton: &#x27;Only URL buttons are implemented as of yet.&#x27;,
+        customChat: &#x27;custom chat&#x27;,
+        facebook: &#x27;Facebook&#x27;,
+        incomingGetRequest: &#x27;Received incoming GET request&#x27;,
+        incomingPostRequest: &#x27;Received incoming POST request.&#x27;,
+        initWebhook: &#x27;Init webhook for &#x27;,
+        missingAppSecret: &#x27;Missing app_secret in config file.&#x27;,
+        missingPageAccessToken: &#x27;Missing page_access_token in config file.&#x27;,
+        missingVerifyToken: &#x27;Missing verify_token in config file.&#x27;,
+        noPageSubscriptionEvent:
+            &#x27;404 Not Found- Event is not from a page subscription.&#x27;,
+        noUrlProvided: &#x27;No URL provided.&#x27;,
+        noWebsocketError: &#x27;No websocket with the messengerUserID &#x27;,
+        pageSubscriptionEvent: &#x27;Page subscription event.&#x27;,
+        payloadNotVerified: &#x27;The sha1 signature could not be verified.&#x27;,
+        responseTypeNotImplemented:
+            &#x27;CustomChatAdapter: Not implemented response type: &#x27;,
+        sendingMessageToUser: &#x27;Sending message to user &#x27;,
+        unableToSendResponse: &#x27;Message could not be sent to user.&#x27;,
+        webhookListening: &#x27;Webhook is listening on port&#x27;,
+        webhookNotVerfied:
+            &#x27;Unable to verify Webhook. Unauthorized Access: Verify tokens not present&#x27;,
+        webhookVerified: &#x27;Webhook is verfified.&#x27;,
+        websocketError: &#x27;Message could not be sent to user (contactClient).&#x27;,
+    },
+    connections: {
+        component: {
+            database: &#x27;database&#x27;,
+            websocket: &#x27;WebSocket&#x27;,
+        },
+        userConnectedTo: &#x27;User connected to &#x27;,
+    },
+    core: {
+        handleReceivedMessage:
+            &#x27;Core: Error whilst handling received message in core (handleReceivedMessageInCore) &#x3D;&gt; &#x27;,
+        handleTextRequest: &#x27;Core: handleTextRequest &#x3D;&gt; &#x27;,
+        isFallbackIntent: &#x27;Is fallback intent.&#x27;,
+        noResponseNotPossible: &#x27;No Response should not occur in this adapter.&#x27;,
+        scoreBelowThreshold: &#x27;Score below threshold.&#x27;,
+        sendToNextAgent: &#x27;Send request to next agent...&#x27;,
+        transformToChatAdapterResponseError:
+            &#x27;An error occured during the transformation of the NLPMessage to ChatAdapterResponse.&#x27;,
+        unsupportedButtonError: &#x27;This button is not supported.&#x27;,
+        unsupportedCustomPayloadError: &#x27;This payload is not supported.&#x27;,
+    },
+    database: {
+        connectionUndefined:
+            &#x27;Connection to database failed. Connection undefined.&#x27;,
+        failedToConnect: &#x27;Failed to connect to database: &#x27;,
+        userNotFoundOrCreatable:
+            &#x27;User not found and provided information is insufficient to create.&#x27;,
+    },
+    initializeLogging: &#x27;Initialized Logger on level: &#x27;,
+    nlp: {
+        adapter: {
+            dialogflowAdapter: &#x27;DialogflowAdapter: &#x27;,
+            dialogflowV2Adapter: &#x27;DialogflowV2Adapter: &#x27;,
+            rasaAdapter: &#x27;RasaAdapter: &#x27;,
+        },
+        contextCreated:
+            &#x27;Context created. API v2 typings are weird, log response and change framework&#x27;,
+        deleteAllContexts: &#x27;Error whilst deleting all contexts: &#x27;,
+        deleteSelectedContexts: &#x27;Error whilst deleting selected contexts: &#x27;,
+        moreThanOneResponse:
+            &#x27;Error: A miracle! More than one response returned. Examine me: &#x27;,
+        sendTextRequest: &#x27;Error Occured in sendTextRequest: &#x27;,
+        setContexts: &#x27;Added the following contexts: &#x27;,
+        toNlpMessage: &#x27;Unknown message type.&#x27;,
+        unableToAddContexts:
+            &#x27;unable to set at least one of the following contexts: &#x27;,
+    },
+    request: {
+        text_request: &#x27;Sending a message to agent. Message content: &#x27;,
+    },
+    response: {
+        action: &#x27;Action: &#x27;,
+        after_action: &#x27;After action: &#x27;,
+        agent: &#x27;Agent: &#x27;,
+        data: &#x27;Response data: &#x27;,
+        score: &#x27;Score is: &#x27;,
+    },
+    textHandlingInit: &#x27;Inside text handling...&#x27;,
+    unsupportedMessageType: &#x27;Unsupported type&#x27;,
+    warnings: {
+        hash_mismatch:
+            &#x27;The provided message does not match the provided hash: &#x27;,
+        no_agents: &#x27;No agents were provided for request: &#x27;,
+    },
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="LOG_MESSAGES"></a>
+                        <span class="name">
+                            <b>
+                            LOG_MESSAGES</b>
+                            <a href="#LOG_MESSAGES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>DEFAULT_LOG_MESSAGES</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/constants/messages.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="DEFAULT_MESSAGES"></a>
+                        <span class="name">
+                            <b>
+                            DEFAULT_MESSAGES</b>
+                            <a href="#DEFAULT_MESSAGES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    defaultAttachmentResponse: &#x27;I prefer cute kittens!&#x27;,
+    error: {
+        general: &#x27;&#x27;,
+        handlingBetweenCoreAndChatAdapter:
+            &#x27;That did not quite work. Something went wrong during processing your answer. Please try again!&#x27;,
+        messageHandlingInCore:
+            &#x27;A problem occured during the processing of your request. Please try again!&#x27;,
+        unsupportedAttachment:
+            &#x27;I currently do not support this kind of attachment.&#x27;,
+        unsupportedFormat:
+            &#x27;I was unable to process your message: Unsupported message type. I can currently only process \
+            text messages, audio messages and the following attachments: images (.png or .jpg).&#x27;,
+    },
+    links: {
+        kitten:
+            &#x27;https://www.petbarn.com.au/petspot/app/uploads/2019/01/kitten-000017380158_Smaller.jpg&#x27;,
+    },
+    noAgent:
+        &#x27;I currently do not use an agent that allows me to understand natural language.&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="MESSAGES"></a>
+                        <span class="name">
+                            <b>
+                            MESSAGES</b>
+                            <a href="#MESSAGES"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>DEFAULT_MESSAGES</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/interceptorConfig.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="interceptorConfig"></a>
+                        <span class="name">
+                            <b>
+                            interceptorConfig</b>
+                            <a href="#interceptorConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Interceptor.html" target="_self" >InterceptorConfig</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    chatToCore: MirrorInterceptor.getInstance,
+    nlpToCore: MirrorInterceptor.getInstance,
+    nlpToNlp: MirrorInterceptor.getInstance,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Simple interceptor configuration. Interceptors are interceptors across the framework to manipulate messages or
+perform further actions. These exemplar interceptors are only used to mirror an incoming message without further
+modifications. You can write arbitrarily complex interceptors, for more information see
+<a href="../../_build/html/core/interfaces.html">here</a>.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/logger.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logger"></a>
+                        <span class="name">
+                            <b>
+                            logger</b>
+                            <a href="#logger"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>winston.createLogger({
+    format: winston.format.json(),
+    level: logLevel,
+    transports: [
+        new winston.transports.File({ filename: &#x27;error.log&#x27;, level: &#x27;error&#x27; }),
+        new winston.transports.File({ filename: &#x27;userDefinedLogging.log&#x27; }),
+    ],
+})</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="logLevel"></a>
+                        <span class="name">
+                            <b>
+                            logLevel</b>
+                            <a href="#logLevel"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>process.env.loggingLevel || &#x27;verbose&#x27;</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>We initialize and export an instance of a winston logger, using the default npm logging levels
+(see <a href="https://www.npmjs.com/package/winston#logging-levels">https://www.npmjs.com/package/winston#logging-levels</a>)</p>
+<p>All logs with a severity equal or above <code>error</code> are stored in <code>error.log</code></p>
+<p>All logs with a severity equal or above the <code>logLevel</code> set by yourself (default: <code>verbose</code>)
+are stored in <code>userDefinedLogging.log</code></p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformChatFacebook.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformChatFacebook"></a>
+                        <span class="name">
+                            <b>
+                            platformChatFacebook</b>
+                            <a href="#platformChatFacebook"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/FacebookChatConfig.html" target="_self" >FacebookChatConfig</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    appSecret: &#x27;YOUR_APP_SECRET&#x27;,
+    constructor: FacebookAdapter,
+    name: &#x27;facebook&#x27;,
+    pageAccessToken: &#x27;YOUR_PAGE_ACCESS_TOKEN&#x27;,
+    url: &#x27;https://graph.facebook.com/&#x27;,
+    verifyToken: &#x27;YOUR_VERIFY_TOKEN&#x27;,
+    version: &#x27;v3.3&#x27;,
+    webhook_path: &#x27;/webhook&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Facebook adapter. If you are unsure which information is required and how to retrieve it,
+take a look at the <a href="../../_build/html/chat_adapter/facebook.html">Facebook</a> section of our documentation.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformChatSlack.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformChatSlack"></a>
+                        <span class="name">
+                            <b>
+                            platformChatSlack</b>
+                            <a href="#platformChatSlack"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/SlackAdapter.html" target="_self" >ChatConfig&lt;SlackAdapter&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    appSecret: &#x27;YOUR-SLACK-APP-SECRET&#x27;,
+    constructor: SlackAdapter,
+    name: &#x27;slack&#x27;,
+    url: &#x27;https://slack.com/api/chat.postMessage&#x27;,
+    webhook_path: &#x27;/webhook&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Slack adapter. If you are unsure which information is required and how to retrieve it,
+take a look at the <a href="../../_build/html/chat_adapter/slack.html">Slack</a> section of our documentation.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformNlpDialogflow.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformNlpDialogflow"></a>
+                        <span class="name">
+                            <b>
+                            platformNlpDialogflow</b>
+                            <a href="#platformNlpDialogflow"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/DialogflowConfig.html" target="_self" >DialogflowConfig</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    agents: {
+        first_agent: {
+            defaultLifespan: 2,
+            executionIndex: 0,
+            project_id: &#x27;&#x27;, //Not required for V1, can be left empty.
+            languageCode: &#x27;en&#x27;,
+            minScore: 0.75,
+            token: &#x27;YOUR_DIALOGFLOW_TOKEN_FROM_AGENT_1&#x27;,
+            url: &#x27;https://api.dialogflow.com/v1/query?v&#x3D;20150910&#x27;,
+        },
+        second_agent: {
+            defaultLifespan: 2,
+            executionIndex: 1,
+            project_id: &#x27;&#x27;, //Not required for V1, can be left empty.
+            languageCode: &#x27;en&#x27;,
+            minScore: 0.5,
+            token: &#x27;YOUR_DIALOGFLOW_TOKEN_FROM_AGENT_2&#x27;,
+            url: &#x27;https://api.dialogflow.com/v1/query?v&#x3D;20150910&#x27;,
+        },
+    },
+    constructor: DialogflowAdapter,
+    name: &#x27;dialogflow&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Dialogflow adapter (using version 1 of the Dialogflow API). If you are unsure which
+information is required and how to retrieve it, take a look at the
+<a href="../../_build/html/nlp_adapter/dialogflow.html">Dialogflow</a> section of our documentation.</p>
+<p>IMPORTANT: Version 1 is deprecated and the documentation might be incomplete. Please consider switching to version 2.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformNlpDialogflowV2.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformNlpDialogflowV2"></a>
+                        <span class="name">
+                            <b>
+                            platformNlpDialogflowV2</b>
+                            <a href="#platformNlpDialogflowV2"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/DialogflowConfig.html" target="_self" >DialogflowConfig</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    agents: {
+        my_first_agent: {
+            defaultLifespan: 2,
+            executionIndex: 0,
+            languageCode: &#x27;en-US&#x27;,
+            minScore: 0.8,
+            project_id: &#x27;GCP-ID-Project1&#x27;,
+            token: &#x27;path/to/your/dialogflowApiToken1.json&#x27;,
+            url: &#x27;&#x27;, // You do not need an endpoint url. This is provided by the Dialogflow dependency itself.
+        },
+        my_second_agent: {
+            defaultLifespan: 2,
+            executionIndex: 1,
+            languageCode: &#x27;en-US&#x27;,
+            minScore: 0.75,
+            project_id: &#x27;GCP-ID-Project2&#x27;,
+            token: &#x27;path/to/your/dialogflowApiToken2.json&#x27;,
+            url: &#x27;&#x27;, // You do not need an endpoint url. This is provided by the Dialogflow dependency itself.
+        },
+    },
+    constructor: DialogflowV2Adapter,
+    name: &#x27;dialogflowV2&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Dialogflow adapter (using version 2 of the Dialogflow API). If you are unsure which
+information is required and how to retrieve it, take a look at the
+<a href="../../_build/html/nlp_adapter/dialogflow.html">Dialogflow</a> section of our documentation.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformNlpRasa.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformNlpRasa"></a>
+                        <span class="name">
+                            <b>
+                            platformNlpRasa</b>
+                            <a href="#platformNlpRasa"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/RasaAdapter.html" target="_self" >NlpConfig&lt;RasaAdapter&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    agents: {
+        rasa_test: {
+            executionIndex: 0,
+            languageCode: &#x27;en&#x27;,
+            minScore: 0.5,
+            token: &#x27;your_secret_token&#x27;,
+            url: &#x27;http://localhost:5005&#x27;,
+        },
+    },
+    constructor: RasaAdapter,
+    name: &#x27;rasa&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Rasa adapter. If you are unsure which information is required and how to retrieve it,
+take a look at the <a href="../../_build/html/nlp_adapter/rasa.html">Rasa</a> section of our documentation.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/platformNlpSnips.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="platformNlpSnips"></a>
+                        <span class="name">
+                            <b>
+                            platformNlpSnips</b>
+                            <a href="#platformNlpSnips"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/SnipsAdapter.html" target="_self" >NlpConfig&lt;SnipsAdapter&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    agents: {
+        snips_test: {
+            executionIndex: 0,
+            languageCode: &#x27;en&#x27;,
+            minScore: 0.8,
+            token: &#x27;your_secret token&#x27;,
+            url: &#x27;https://www.url-to-your-server.com&#x27;,
+        },
+    },
+    constructor: SnipsAdapter,
+    name: &#x27;snips&#x27;,
+}</code>
+                        </td>
+                    </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Exemplar configuration of the Snips adapter. If you are unsure which information is required and how to retrieve it,
+take a look at the <a href="../../_build/html/nlp_adapter/snips.html">Snips</a> section of our documentation.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/configuration/serverConfig.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="serverConfig"></a>
+                        <span class="name">
+                            <b>
+                            serverConfig</b>
+                            <a href="#serverConfig"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../miscellaneous/typealiases.html#ServerConfig" target="_self" >ServerConfig</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+    // The port your application runs on. If your application runs inside of a proxy,
+    // do not enter the port the messaging platform uses to communicate with, but the internally mapped port.
+    port: 1234,
+}</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+    <h3>src/chat_adapter/facebook/communication/webhook.ts</h3>
+    <section>
+    <h3></h3>        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WEBHOOK_PATH"></a>
+                        <span class="name">
+                            <b>
+                            WEBHOOK_PATH</b>
+                            <a href="#WEBHOOK_PATH"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;/webhook&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="WEBHOOK_VERIFICATION"></a>
+                        <span class="name">
+                            <b>
+                            WEBHOOK_VERIFICATION</b>
+                            <a href="#WEBHOOK_VERIFICATION"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>&#x27;/webhook&#x27;</code>
+                        </td>
+                    </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'miscellaneous-variables';
+            var COMPODOC_CURRENT_PAGE_URL = 'variables.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
