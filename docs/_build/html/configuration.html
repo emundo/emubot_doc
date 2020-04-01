@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -98,6 +100,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -188,8 +191,8 @@
 <span id="config-file"></span><h1>Configuration file<a class="headerlink" href="#configuration-file" title="Permalink to this headline">¶</a></h1>
 <p>Central to your chatbot is its configuration file (which we will also call the <em>config</em>). In this file, you declare which messaging and NLP service you want to use and
 include all information required to authenticate with the distinctive services.
-You have to follow a predefined format specified in the <a class="reference external" href="../../api_reference/miscellaneous/typealiases.html#Agent">Typings</a> of the framework.</p>
-<p><strong>Important: You always have to set the configuration before you can start the bot</strong>.</p>
+You have to follow a predefined format specified in the <a class="reference external" href="../api_reference/miscellaneous/typealiases.html#Agent">Typings</a> of the framework.</p>
+<p><strong>Important: Without a valid configuration file the framework will start in the default configuration. In default configuration the framework provides a simple communication test which is accessible through the</strong> <a class="reference external" href="chat_adapter/cli_client.html">CLI client</a>.</p>
 <div class="section" id="basic-structure">
 <h2>Basic structure<a class="headerlink" href="#basic-structure" title="Permalink to this headline">¶</a></h2>
 <p>The minimum requirements necessary to start a bot are the specification of:</p>
@@ -204,7 +207,7 @@ You have to follow a predefined format specified in the <a class="reference exte
 <h2>Exemplar Configuration File<a class="headerlink" href="#exemplar-configuration-file" title="Permalink to this headline">¶</a></h2>
 <p>In this exemplar configuration file, we use the <a class="reference external" href="https://www.facebook.com/">Facebook</a> Messenger as our messaging platform and <a class="reference external" href="https://dialogflow.com/">Dialogflow</a> as
 our NLP Service. We have also provided some configuration files for various combinations of messaging platforms and NLP services
-<a class="reference external" href="https://github.com/emundo/emubot/src/configuration/">here</a>. If you want to change the platforms, you can simply change the respective section (e.g. <code class="code docutils literal notranslate"><span class="pre">platform.chat</span></code>)
+<a class="reference external" href="https://github.com/emundo/emubot/tree/master/src/framework/configuration">here</a>. If you want to change the platforms, you can simply change the respective section (e.g. <code class="code docutils literal notranslate"><span class="pre">platform.chat</span></code>)
 in the configuration file. More information on which variables you need for each platform and how you can get these variables can be found in the distinctive section
 (see below for more information).</p>
 <div class="highlight-javascript notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -365,8 +368,7 @@ messaging platform above. Currently we support</div>
 (such as ordering a pizza). These topics can (and sometimes should) be separated into different <em>agents</em>. An agent
 encompasses all the information required to fulfull user requests and is often also referred to simply as <em>the bot</em>.
 But a bot as a whole can also include multiple agents, even if the user does not realize that different agents are
-handling his requests. The <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> framework allows you to send requests to multiple agents:
-You might to have a higher priority on answering requests to order a pizza than replying to smalltalk.</p>
+handling his requests. The <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> framework allows you to send requests to multiple agents.</p>
 <p>Each of your agents has an <code class="code docutils literal notranslate"><span class="pre">executionIndex</span></code>. The lower the index, the earlier a request will be sent to this agent.
 The NLP service will then return a score between 0 and 1: If it is 100% sure that it can answer the query correctly,
 it will return 1, otherwise it will return a value below 1. The higher the value, the higher is the confidence of the NLP service
@@ -405,7 +407,7 @@ the same configuration for a specific platform, which also means that you only h
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

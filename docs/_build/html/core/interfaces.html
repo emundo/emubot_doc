@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -90,6 +92,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -190,7 +193,7 @@
 <img alt="../_images/architecture.png" src="../_images/architecture.png" />
 <p>There are three distinctive interfaces that allow you to interact with the framework. We call these interfaces the “Chat to Core”,
 “Nlp to Nlp” and “Nlp to Core” interceptor and explain possible use of each interface below. If you do not wish to perform any actions, you can simply
-use a <code class="code docutils literal notranslate"><span class="pre">MirrorInterface</span></code> which is already part of our base framework and is used in our exemplar repositories. At the interceptor you can
+use a <code class="code docutils literal notranslate"><span class="pre">MirrorInterceptor</span></code> which is already part of our base framework and is used in our exemplar repositories. At the interceptor you can
 perform any action (like adding or removing data from the incoming query), as long as you  return the same format, wrapped in a <code class="code docutils literal notranslate"><span class="pre">Response</span></code>.
 Using the <code class="code docutils literal notranslate"><span class="pre">Response</span></code> wrapper, you can…</p>
 <ol class="arabic simple">
@@ -223,20 +226,22 @@ to the identifier as soon as you want to send the message back to the user.</p>
 <div class="section" id="nlp-to-nlp">
 <span id="nlptonlp"></span><h2>Nlp to Nlp<a class="headerlink" href="#nlp-to-nlp" title="Permalink to this headline">¶</a></h2>
 <p>This second interceptor is especially of relevance if you utilize multiple agents. In the section about <a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html#custom-chat-adapter"><span class="std std-ref">Support Your Chat Platform</span></a>, we explain the default workflow.
-This means, that a message is passed to another agent if it doesnt exceed a minimal score or if a fallback intent occurs.</p>
-<p>Using the Nlp to Nlp interface, you can further introduce advanced rules set by yourself:
+This means, that a message is passed to another agent if it does not exceed a minimal score or if a fallback intent occurs.</p>
+<p>Using the Nlp to Nlp interface, you can further introduce advanced rule sets by yourself:
 Sometimes you want to return some fallback intent, ignore the minimal score or delete contexts set by an agent whose message you do not want to send to the user.</p>
-<p><code class="code docutils literal notranslate"><span class="pre">nlpToCore</span></code> expects an incoming <code class="code docutils literal notranslate"><span class="pre">NlpResponse</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;NlpResponse&gt;</span></code>.</p>
+<p><code class="code docutils literal notranslate"><span class="pre">nlpToNlp</span></code> expects an incoming <code class="code docutils literal notranslate"><span class="pre">NlpResponse</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;NlpResponse&gt;</span></code>.</p>
 </div>
 <div class="section" id="nlp-to-core">
 <span id="nlptocore"></span><h2>Nlp to Core<a class="headerlink" href="#nlp-to-core" title="Permalink to this headline">¶</a></h2>
 <p>After determining the intent (and possibly receiving a static response), you can perform actions using the Nlp to Core interface. Once again, this can have different
 purposes:</p>
-<p>You might want to
-1. manipulate the message (e.g. use parameters retrieved from the NLU platform for a database request, used to assemble a new answer),
-2. begin some event (e.g. send message to the client in5x minutes),
-3. save/retrieve data to/from a service (e.g. save contexts in a database), or
-4. map the pseudonymized user ID to the user ID from the messenger for further processing.</p>
+<p>You might want to</p>
+<ol class="arabic simple">
+<li><p>manipulate the message (e.g. use parameters retrieved from the NLU platform for a database request, used to assemble a new answer),</p></li>
+<li><p>begin some event (e.g. send message to the client after some time),</p></li>
+<li><p>save/retrieve data to/from a service (e.g. save contexts in a database), or</p></li>
+<li><p>map the pseudonymized user ID to the user ID from the messenger for further processing.</p></li>
+</ol>
 <p><code class="code docutils literal notranslate"><span class="pre">nlpToCore</span></code> expects an incoming <code class="code docutils literal notranslate"><span class="pre">NlpResponse</span></code> and returns a <code class="code docutils literal notranslate"><span class="pre">Response&lt;NlpResponse&gt;</span></code>.</p>
 </div>
 </div>
@@ -261,7 +266,7 @@ purposes:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

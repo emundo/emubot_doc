@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -90,6 +92,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -183,8 +186,8 @@
   <div class="section" id="dialogflow">
 <span id="id1"></span><h1>Dialogflow<a class="headerlink" href="#dialogflow" title="Permalink to this headline">¶</a></h1>
 <p>Dialogflow (formerly known as api.ai) is an NLP service offered by Google. Dialogflow version 1 has used developer and client access tokens to authorize access.
-The support for this authorization method will soon be replaced completely and they only Dialogflow version 2 will be supported , where you have to authorize
-using tokens provided by Google Cloud Projects. The following instructions will only cover the Dialogflow version 2 authentication, since version 1 will be
+The support for this authorization method will soon be replaced completely and only the Dialogflow version 2 will be supported, where you have to authorize
+using tokens provided by the Google Cloud Projects. The following instructions will only cover the Dialogflow version 2 authentication, since version 1 will be
 deprecated soon (even though <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> still supports Dialogflow version 1).</p>
 <div class="section" id="setting-up-a-dialogflow-agent">
 <h2>Setting Up A Dialogflow Agent<a class="headerlink" href="#setting-up-a-dialogflow-agent" title="Permalink to this headline">¶</a></h2>
@@ -215,7 +218,7 @@ You can use an existing configuration file and simply alter the values. The stru
 <span class="p">};</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">url</span></code> is not required for dialogflow version 2 since we will use the dialogflow dependency. The language codes can be found in the dialogflow docs.
+<p>The <code class="docutils literal notranslate"><span class="pre">url</span></code> is not required for dialogflow version 2 since we will use the <code class="code docutils literal notranslate"><span class="pre">dialogflow</span></code> package. The language codes can be found in the Dialogflow docs.
 More information regarding the <code class="code docutils literal notranslate"><span class="pre">executionIndex</span></code> and <code class="code docutils literal notranslate"><span class="pre">minScore</span></code> can be found at <a class="reference internal" href="custom_nlp_adapter.html#custom-nlp-adapter"><span class="std std-ref">Support Your NLP Platform</span></a>.</p>
 </div>
 </div>
@@ -240,7 +243,7 @@ More information regarding the <code class="code docutils literal notranslate"><
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

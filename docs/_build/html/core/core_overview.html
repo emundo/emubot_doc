@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -90,6 +92,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -185,7 +188,7 @@ is only used to manage API calls to and from a messaging platform, verifying the
 that an incoming message is stripped of (for our purpose unnecessary) information and metadata and converted into a generalized format used internally in the
 framework. As soon as the core receives such a generalized incoming message, it is send to the first interceptor, <a class="reference internal" href="interfaces.html#chattocore"><span class="std std-ref">Chat to Core</span></a>. Here you can manipulate the
 message (content as well as user identifier) or perform additional actions, such as saving data in a database. After this and every other interceptor, the workflow
-can be interrupted (returning some response or no response to the user) or continued. We will focus on the workflow used to process the the most common case of message:
+can be interrupted (returning some response or no response to the user) or continued. We will focus on the workflow used to process the most common case of message:
 text messages. Take a look at <a class="reference internal" href="interfaces.html#interceptors"><span class="std std-ref">Interceptors</span></a> for more information regarding the functionality of other use cases and how to properly handle a message at the
 interceptor.</p>
 <p>After the first interceptor has returned a text message, it is passed to the Nlp Adapter of your choice which sends the message to the agent with the highest
@@ -197,7 +200,7 @@ a message,..) are performed before returning the message to the chat adapter whi
 <p>Using a generalized format, it can happen that additional information from the initial message is required (e.g. if a user sends his location using Facebook
 which is encapsuled in an additional parameter). To keep the framework slim and focusing on the most important use cases, we have decided against supporting
 all possible types for now. Please issue a pull request if you think that an existing type is incorrect or if it should be extended. Types that are not supported
-are put into an <cite>invalid</cite> message and can be handked in the first interceptor. The whole payload is part of such a message, so that you can decide what to do with
+are put into an <cite>invalid</cite> message and can be handled in the first interceptor. The whole payload is part of such a message, so that you can decide what to do with
 the message at the first interceptor.</p>
 </div>
 
@@ -221,7 +224,7 @@ the message at the first interceptor.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

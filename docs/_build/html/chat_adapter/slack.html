@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -35,7 +37,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Support Your Chat Platform" href="your_custom_chat_adapter.html" />
+    <link rel="next" title="CLI Client Adapter" href="cli_client.html" />
     <link rel="prev" title="Facebook Messenger" href="facebook_messenger.html" /> 
 </head>
 
@@ -99,6 +101,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#testing-your-setup">Testing Your Setup</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -234,12 +237,13 @@ is up and running on the correct URL.</p>
 </div>
 <div class="section" id="exemplar-slack-config">
 <span id="id3"></span><h2>Exemplar Slack Config<a class="headerlink" href="#exemplar-slack-config" title="Permalink to this headline">¶</a></h2>
-<p>To start the Botframework with the Slack adapter you will need to provide a
+<p>To start <code class="code docutils literal notranslate"><span class="pre">emubot</span></code> with the Slack adapter you will need to provide a
 valid platform configuration file. Assuming you have already setup a NLP
 agent (see <a class="reference internal" href="../nlp_adapter/dialogflow.html#exemplar-df-config"><span class="std std-ref">Exemplar Dialogflow Configuration</span></a>), the configuration should look
 like this:</p>
 <div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="kr">export</span> <span class="kr">const</span> <span class="nx">platformChatSlack</span><span class="o">:</span> <span class="nx">ChatConfig</span><span class="o">&lt;</span><span class="nx">SlackAdapter</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
     <span class="nx">appSecret</span><span class="o">:</span> <span class="s1">&#39;YOUR-SLACK-APP-SECRET&#39;</span><span class="p">,</span>
+    <span class="nx">token</span><span class="o">:</span> <span class="s1">&#39;YOUR_SLACK_OAUTH_TOKEN&#39;</span><span class="p">,</span>
     <span class="nx">constructor</span><span class="o">:</span> <span class="nx">SlackAdapter</span><span class="p">,</span>
     <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;slack&#39;</span><span class="p">,</span>
     <span class="nx">url</span><span class="o">:</span> <span class="s1">&#39;https://slack.com/api/chat.postMessage&#39;</span><span class="p">,</span>
@@ -248,7 +252,7 @@ like this:</p>
 </pre></div>
 </div>
 <p>After you have saved the configuration file you can simply compile the program
-(using <cite>npm run tsc</cite>) and run the bot with <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
+(using <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">tsc</span></code>) and run the bot with <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
 </div>
 <div class="section" id="supported-features">
 <h2>Supported Features<a class="headerlink" href="#supported-features" title="Permalink to this headline">¶</a></h2>
@@ -274,7 +278,7 @@ able to start a conversation with your bot.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="your_custom_chat_adapter.html" class="btn btn-neutral float-right" title="Support Your Chat Platform" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="cli_client.html" class="btn btn-neutral float-right" title="CLI Client Adapter" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="facebook_messenger.html" class="btn btn-neutral float-left" title="Facebook Messenger" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -286,7 +290,7 @@ able to start a conversation with your bot.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

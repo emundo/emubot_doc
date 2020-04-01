@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -90,6 +92,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -207,10 +210,8 @@ your bot to use.</p>
 <p>Afterwards you should be good to go and can follow along the lines of the
 <a class="reference external" href="https://snips-nlu.readthedocs.io/en/latest/tutorial.html">Snips NLU tutorial</a>
 to define and train your bot.
-Snips NLU does not provide a server by default. <a href="#id2"><span class="problematic" id="id3">:code:`emubot ` provides
-a simple test server based on the `Flask &lt;https://github.com/pallets/flask&gt;`_</span></a>
-web application framework, which you can adapt to your needs. Your server
-should provide a POST route for the following request:</p>
+Snips NLU does not provide a server by default.
+Your server should provide a POST route for the following request:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>POST /parse
 </pre></div>
 </div>
@@ -308,7 +309,7 @@ these messages to the user as part of the response.</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

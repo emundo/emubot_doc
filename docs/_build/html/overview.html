@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script type="text/javascript" src="_static/jquery.js"></script>
-        <script type="text/javascript" src="_static/underscore.js"></script>
-        <script type="text/javascript" src="_static/doctools.js"></script>
-        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -93,6 +95,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/facebook_messenger.html">Facebook Messenger</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chat_adapter/cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chat_adapter/your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -193,8 +196,8 @@ the intention of a user to further process the message.</p>
 information and directly respond to the user or signal that an external service has to be used to give an adequate response. These services are often
 operated by large companies such as Google (Dialogflow) or Microsoft (LUIS), but (open source) startups like Rasa and Snips also have established
 themselves.</p>
-<p>If you want to offer a chatbot, you as the chatbot operator usually have have to define certain <em>intents</em> (<em>which requests should the bot answer</em>)
-using specific <em>entities</em> (<em>which words are relevant to detecting the intention and further processing the query</em>) and possibly (often static) answers
+<p>If you want to offer a chatbot, you as the chatbot operator usually have to define certain <em>intents</em> (which define which requests the bot should answer)
+using specific <em>entities</em> (defining which words are relevant to detecting the intention and further processing the query) and possibly (often static) answers
 or (dynamic) external actions.</p>
 <p>Afterwards you can often directly connect a messaging platform to your NLP service, which is then able to guess the intention and reply to the user
 by using the static answers or the dynamic actions which belong to this intent.
@@ -237,7 +240,7 @@ and offer distinctive interfaces to allow a platform-independent communication a
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>

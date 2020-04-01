@@ -13,6 +13,8 @@
 
   
   
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
   
   
 
@@ -21,10 +23,10 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -102,6 +104,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="slack.html">Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cli_client.html">CLI Client Adapter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="your_custom_chat_adapter.html">Support Your Chat Platform</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Core</span></p>
@@ -221,7 +224,7 @@ add the tokens to your config file (see <a class="reference internal" href="#exe
 <p>On your server: Make sure to redirect the traffic sent to <cite>https://www.url_of_your_server.com/webhook</cite> to the port your bot is
 running on. Using Docker you could for example use a proxy, if you use an Apache Webserver, you might want to add a rewrite rule to your
 <code class="docutils literal notranslate"><span class="pre">~/html/.htaccess</span></code>.</p>
-<p>Important: You need to use https, i.e. have a valid TLS/SSL certificate configured. It is not possible to use self-signed certificates</p>
+<p><strong>Important</strong>: You need to use https, i.e. have a valid TLS/SSL certificate configured. It is not possible to use self-signed certificates.</p>
 <p>The running application is required to verify the webhook and you can not continue without setting the verify token! To run the application, you
 have to set all of the tokens you just got, put the into the configuration file and start the bot.</p>
 </div>
@@ -254,7 +257,7 @@ update the API version, depending on the Graph API version you use.</p>
                 <span class="p">....</span>
 </pre></div>
 </div>
-<p>Compile the code using tsc and run <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
+<p>Compile the code using <code class="code docutils literal notranslate"><span class="pre">tsc</span></code> and run <code class="code docutils literal notranslate"><span class="pre">npm</span> <span class="pre">run</span> <span class="pre">start</span></code>.</p>
 </div>
 <div class="section" id="further-information-regarding-the-setup">
 <h2>Further Information Regarding the Setup<a class="headerlink" href="#further-information-regarding-the-setup" title="Permalink to this headline">¶</a></h2>
@@ -361,7 +364,7 @@ and messaging.recipient.id. Test it:</p>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2019, eMundo GmbH
+        &copy; Copyright 2020, eMundo GmbH
 
     </p>
   </div>
