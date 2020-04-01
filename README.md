@@ -1,2 +1,2 @@
 # emubot_doc
-Documentation repository für the emubot package.
+Documentation repository for the emubot package.
