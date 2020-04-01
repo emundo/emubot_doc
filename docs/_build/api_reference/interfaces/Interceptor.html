@@ -1,0 +1,379 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>emubot API Documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/readthedocs.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">emubot API Documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content interface">
+                   <div class="content-data">
+
+
+
+
+
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Interfaces</li>
+  <li>Interceptor</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/framework/interceptors/Interceptor.ts</code>
+        </p>
+
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Interface that defines an <code>Interceptor</code>.</p>
+<p>While you can stop the pipeline processing in your interceptor and return a <code>NoResponse</code>, you should
+provide some feedback to the user that the request was successful (or not). You can do that by either returning
+a suitable message to the emubot framework or using one of the alternative contact routes provided by the used
+<code>ChatAdapter</code> via the <code>contactClient</code> method.</p>
+<p>The emubot framework has some examples for different interceptors that you can find in our extended example
+<a href="https://github.com/emundo/emubot-extended-example/">here</a>.</p>
+<p>emubot uses three interceptors:</p>
+<ol>
+<li>Interceptor <code>chatToCore</code>,</li>
+<li>Interceptor <code>nlpToNlp</code> and</li>
+<li>Interceptor <code>nlpToCore</code>.</li>
+</ol>
+<p>Interceptor <code>chatToCore</code> handles the message after transforming it into a common format and before any internal or
+external state is changed. Invalid requests should be handled here (log or further process them). The <code>payload.type</code>
+should be changed in your custom code if you want to further process the message. If the type remains &#39;invalid&#39;,
+an error message is returned to the user.</p>
+<p>Common use cases include:</p>
+<ol>
+<li>Pseudonymization of the messengerUserId.</li>
+<li>Handling messages which are no text messages.</li>
+<li>Save values in a database or retrieve them.</li>
+</ol>
+<p>Possible invalid messages are e.g. &#39;Location&#39; which can be received from Facebook, but which are not supported yet.
+Specialized and platform-specific types will most likely not be supported by this framework to avoid bloated code.</p>
+<p>Possible solutions:</p>
+<ol>
+<li>Contact us if you think that a type required by yourself will be required by a large group of users.</li>
+<li>(Fastest solution) Fork the repo and add the types to the relevant Adapter and ChatAdapterRequest.</li>
+<li>A generic payload type might be added in the future, where most information from the message could be accessed,
+if the current type is too restrictive.</li>
+</ol>
+<p>Interceptor <code>nlpToNlp</code> intercepts the message during the determination which agent should be used. Mainly required if
+multiple agents are used (otherwise a default <code>MirrorInterface</code> should suffice).</p>
+<p>Common use cases are:</p>
+<ol>
+<li>Stop the decision making early: Accept messages (e.g. fallbacks depending on the context).</li>
+<li>Delete/Add contexts if the message of a specific agent is not used in the user response.</li>
+</ol>
+<p>Interceptor <code>nlpToCore</code> intercepts the already determined, final message from the NLP service. Takes an NlpResponse as
+input and returns another NlpResponse.</p>
+<p>Common use cases are:</p>
+<ol>
+<li>Execute external actions.</li>
+<li>Save values in a database or retrieve values.</li>
+<li>Depseudonymize the internalUserId.</li>
+</ol>
+
+            </p>
+
+
+        <section>
+            <h3 id="index">Index</h3>
+            <table class="table table-sm table-bordered index-table">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <h6><b>Methods</b></h6>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <ul class="index-list">
+                                <li>
+                                    <a href="#handleMessage">handleMessage</a>
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="handleMessage"></a>
+                    <span class="name">
+                        <b>
+                            handleMessage
+                        </b>
+                        <a href="#handleMessage"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>handleMessage(userId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, message: T)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="68"
+                            class="link-to-prism">src/framework/interceptors/Interceptor.ts:68</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>userId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A user identifier required to process the message. Should be depseudonymized when
+receiving/sending a text from/to the messaging platform and pseudonymized when
+sending it to an NLP service.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>message</td>
+                                    <td>
+                                            <code>T</code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The respective message. The type and content of the message depends on the stage where the message
+is processed (e.g. before sending it to the NLP service or afterwards)</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="../miscellaneous/typealiases.html#Response" target="_self" >Promise&lt;Response&lt;U&gt;&gt;</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        <p>A (usually user-defined) <code>Response</code>.</p>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Response } from &#x27;../core/model/Response&#x27;;
+
+/**
+ * Interface that defines an &#x60;Interceptor&#x60;.
+ *
+ * While you can stop the pipeline processing in your interceptor and return a &#x60;NoResponse&#x60;, you should
+ * provide some feedback to the user that the request was successful (or not). You can do that by either returning
+ * a suitable message to the emubot framework or using one of the alternative contact routes provided by the used
+ * &#x60;ChatAdapter&#x60; via the &#x60;contactClient&#x60; method.
+ *
+ * The emubot framework has some examples for different interceptors that you can find in our extended example
+ * [here](https://github.com/emundo/emubot-extended-example/).
+ *
+ * emubot uses three interceptors:
+ *
+ * 1. Interceptor &#x60;chatToCore&#x60;,
+ * 2. Interceptor &#x60;nlpToNlp&#x60; and
+ * 3. Interceptor &#x60;nlpToCore&#x60;.
+ *
+ * Interceptor &#x60;chatToCore&#x60; handles the message after transforming it into a common format and before any internal or
+ * external state is changed. Invalid requests should be handled here (log or further process them). The &#x60;payload.type&#x60;
+ * should be changed in your custom code if you want to further process the message. If the type remains &#x27;invalid&#x27;,
+ * an error message is returned to the user.
+ *
+ * Common use cases include:
+ * 1. Pseudonymization of the messengerUserId.
+ * 2. Handling messages which are no text messages.
+ * 3. Save values in a database or retrieve them.
+ *
+ * Possible invalid messages are e.g. &#x27;Location&#x27; which can be received from Facebook, but which are not supported yet.
+ * Specialized and platform-specific types will most likely not be supported by this framework to avoid bloated code.
+ *
+ * Possible solutions:
+ * 1. Contact us if you think that a type required by yourself will be required by a large group of users.
+ * 2. (Fastest solution) Fork the repo and add the types to the relevant Adapter and ChatAdapterRequest.
+ * 3. A generic payload type might be added in the future, where most information from the message could be accessed,
+ * if the current type is too restrictive.
+ *
+ *
+ * Interceptor &#x60;nlpToNlp&#x60; intercepts the message during the determination which agent should be used. Mainly required if
+ * multiple agents are used (otherwise a default &#x60;MirrorInterface&#x60; should suffice).
+ *
+ * Common use cases are:
+ * 1. Stop the decision making early: Accept messages (e.g. fallbacks depending on the context).
+ * 2. Delete/Add contexts if the message of a specific agent is not used in the user response.
+ *
+ *
+ * Interceptor &#x60;nlpToCore&#x60; intercepts the already determined, final message from the NLP service. Takes an NlpResponse as
+ * input and returns another NlpResponse.
+ *
+ * Common use cases are:
+ * 1. Execute external actions.
+ * 2. Save values in a database or retrieve values.
+ * 3. Depseudonymize the internalUserId.
+ *
+ */
+// eslint-disable-next-line @typescript-eslint/interface-name-prefix
+export interface Interceptor&lt;T, U&gt; {
+    /**
+     *
+     * @param userId A user identifier required to process the message. Should be depseudonymized when
+     *               receiving/sending a text from/to the messaging platform and pseudonymized when
+     *               sending it to an NLP service.
+     * @param message The respective message. The type and content of the message depends on the stage where the message
+     *                is processed (e.g. before sending it to the NLP service or afterwards)
+     * @returns A (usually user-defined) &#x60;Response&#x60;.
+     */
+    handleMessage(userId: string, message: T): Promise&lt;Response&lt;U&gt;&gt;;
+}
+</code></pre>
+    </div>
+</div>
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'interface';
+            var COMPODOC_CURRENT_PAGE_URL = 'Interceptor.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
